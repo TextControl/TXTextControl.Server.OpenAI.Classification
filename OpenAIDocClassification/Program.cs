@@ -2,7 +2,18 @@
 
 const int MAX_TOKENS = (3897 / 4);
 
-var documentText = ExtractDocumentText("Documents/agreement.pdf");
+// read filename from user input
+Console.WriteLine("Enter the path to the document to classify:");
+string filePath = Console.ReadLine();
+
+// return if file does not exist
+if (!System.IO.File.Exists(filePath))
+{
+    Console.WriteLine("File does not exist.");
+    return;
+}
+
+var documentText = ExtractDocumentText(filePath);
 
 // Limit to max tokens
 if (documentText.Length > MAX_TOKENS)

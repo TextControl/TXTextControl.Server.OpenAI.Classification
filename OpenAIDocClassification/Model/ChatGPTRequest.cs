@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Models { 
+namespace TXTextControl.OpenAI { 
     public class ChatGPTRequest
     {
         public string Text { get; set; }
@@ -85,8 +85,6 @@ namespace Models {
 
     public class Constants
     {
-        public string OPENAI_MODEL = "text-davinci-003";
         public static string OPENAI_API_KEY = "";
     }
-
-    }
+}
